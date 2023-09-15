@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
     #region Fields
     private float StickToGround = 4;
-    public Text SpeedText;
+    public TextMeshProUGUI SpeedText;
     [Header("Movement")]
     public float speed = 10;
     public float IncreaseRate = 10f;
@@ -48,7 +49,7 @@ public class PlayerController : MonoBehaviour
     //Ledge
     private bool isLedgeClimbing;
     #endregion
-    // Start is called before the first frame update
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
